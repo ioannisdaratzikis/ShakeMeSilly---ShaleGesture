@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="edosz.ttf">
+            <string>EdoSZ</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,98 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach" translatesAutoresizingMaskIntoConstraints="NO" id="TtC-vF-vIm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="dbX-0y-hwd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake Me Silly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tp0-tB-bC5">
+                                <rect key="frame" x="10" y="10" width="343" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="7yE-ZI-G6Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EdoSZ" family="Edo SZ" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjb-AO-zUK">
+                                <rect key="frame" x="16" y="573" width="343" height="74"/>
+                                <color key="backgroundColor" red="0.8085818886756897" green="0.25132310390472412" blue="0.052019007503986359" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="tYH-u3-2kp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EdoSZ" family="Edo SZ" pointSize="36"/>
+                                <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fsE-OP-khW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWy-4P-ZNZ">
+                                <rect key="frame" x="16" y="117" width="343" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="IeT-8W-rCC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EdoSZ" family="Edo SZ" pointSize="55"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT9-qo-h22">
+                                <rect key="frame" x="16" y="466" width="343" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="W7E-vu-BRN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EdoSZ" family="Edo SZ" pointSize="55"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.26274509800000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Maracas1" translatesAutoresizingMaskIntoConstraints="NO" id="9xE-hG-jNL">
+                                <rect key="frame" x="16" y="224" width="343" height="234"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TtC-vF-vIm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1ou-Ry-lYB"/>
+                            <constraint firstItem="VWy-4P-ZNZ" firstAttribute="top" secondItem="Tp0-tB-bC5" secondAttribute="bottom" constant="8" id="1wp-39-7kq"/>
+                            <constraint firstItem="TtC-vF-vIm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="3y1-Hc-gmV"/>
+                            <constraint firstItem="tjb-AO-zUK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="60S-AY-ure"/>
+                            <constraint firstItem="TtC-vF-vIm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="6KU-Wc-MYU"/>
+                            <constraint firstItem="dT9-qo-h22" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9uq-Cf-rpv"/>
+                            <constraint firstItem="9xE-hG-jNL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CWL-bj-9dd"/>
+                            <constraint firstItem="TtC-vF-vIm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EWY-fM-ixa"/>
+                            <constraint firstItem="tjb-AO-zUK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Gx0-tl-wia"/>
+                            <constraint firstItem="dT9-qo-h22" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="H8e-tl-6rq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TtC-vF-vIm" secondAttribute="trailing" constant="-16" id="HHL-GT-qps"/>
+                            <constraint firstItem="tjb-AO-zUK" firstAttribute="top" secondItem="dT9-qo-h22" secondAttribute="bottom" constant="8" id="I1D-Wa-Oax"/>
+                            <constraint firstItem="9xE-hG-jNL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="L7b-jW-OcB"/>
+                            <constraint firstItem="VWy-4P-ZNZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MRh-sz-KTJ"/>
+                            <constraint firstItem="Tp0-tB-bC5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="Zi6-kX-Cpf"/>
+                            <constraint firstItem="Tp0-tB-bC5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="ahv-ng-Fl2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tp0-tB-bC5" secondAttribute="trailing" constant="6" id="ckc-RX-90K"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TtC-vF-vIm" secondAttribute="bottom" id="iFt-N1-D94"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TtC-vF-vIm" secondAttribute="bottom" id="jsU-rm-r2t"/>
+                            <constraint firstItem="VWy-4P-ZNZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nQB-ca-sXG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tjb-AO-zUK" secondAttribute="bottom" constant="20" id="q02-SG-WJg"/>
+                            <constraint firstAttribute="trailing" secondItem="TtC-vF-vIm" secondAttribute="trailing" id="sHf-Po-srZ"/>
+                            <constraint firstItem="dT9-qo-h22" firstAttribute="top" secondItem="9xE-hG-jNL" secondAttribute="bottom" constant="8" id="vcW-Rv-MB3"/>
+                            <constraint firstItem="9xE-hG-jNL" firstAttribute="top" secondItem="VWy-4P-ZNZ" secondAttribute="bottom" constant="8" id="w9p-DX-PIo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="9xE-hG-jNL" id="7KO-D5-hco"/>
+                        <outlet property="scoreLabel" destination="dT9-qo-h22" id="yJO-EI-6uw"/>
+                        <outlet property="startButton" destination="tjb-AO-zUK" id="mQK-Ym-n4x"/>
+                        <outlet property="timerLabel" destination="VWy-4P-ZNZ" id="ZPr-JC-UDD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Maracas1" width="551" height="743"/>
+        <image name="beach" width="1920" height="1080"/>
+    </resources>
 </document>
